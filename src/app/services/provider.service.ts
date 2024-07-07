@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { API_URL } from '../../globals';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProviderService {
 
-  urlProviders = 'http://127.0.0.1:8080/providers';
+  urlProviders = `${API_URL}/providers`;
   provider: any;
 
   constructor(private Http: HttpClient) { }
